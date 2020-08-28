@@ -1,0 +1,26 @@
+@import "base/variables";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap');
+
+body{
+    font-family: "Poppins", sans-serif;
+    background-color: $gray;
+    margin: 0 1.5em 0 1.5em;
+
+    @media (min-width: $desktop){
+        margin: 0 6rem 0 6rem;
+    };
+};
+
+input, button {
+    font-family: "Poppins";
+    border-style: none;
+};
+
+
+h1, h2, h3, button {
+    font-weight: $bold;
+};
+
+p,span {
+    font-weight: $medium;
+};

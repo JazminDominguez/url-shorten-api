@@ -1,0 +1,46 @@
+//@debug Style Guide
+
+//Layout
+
+//The designs were created to the following widths:
+
+$mobile: 375px;
+$desktop: 1440px;
+
+//Colors
+
+//Primary
+
+$cyan: hsl(180, 66%, 49%);
+$dark_violet: hsl(257, 27%, 26%);
+
+//Secondary
+
+$red: hsla(0, 87%, 67%, 0.8);
+
+//Neutral
+$gray: hsl(0, 0%, 75%);
+$grayish_violet: hsl(257, 7%, 63%);
+$very_dark_blue: hsl(255, 11%, 22%);
+$very_dark_violet: hsl(260, 8%, 14%);
+
+//Typography
+
+//Body Copy
+
+$standard_size: 18px;
+
+//Fonts
+
+$poppins: ("https://fonts.google.com/specimen/Poppins");
+$medium: 500;
+$bold: 700;
+
+//Icons
+/*
+For the social icons, you can either use the SVGs provided or a font icon library. Some suggestions for font icon libraries can be found below:
+
+- [Font Awesome](https://fontawesome.com)
+- [IcoMoon](https://icomoon.io)
+- [Ionicons](https://ionicons.com)
+*/

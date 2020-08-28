@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { getLink } from "../actions/index";
+import { Flex, Box } from "rebass";
 
 const Form = () => {
   const dispatch = useDispatch();
@@ -22,19 +23,34 @@ const Form = () => {
   };
 
   return (
-    <form>
-      <div>
-        <input
-          type="text"
-          placeholder="Shorten a link here..."
-          onChange={handleChange}
-          value={originalLink}
-        />
-        {error ? <span>please add a link</span> : <span />}
-      </div>
-      <button className="shorten_it" type="submit" onClick={handleSubmit}>
-        Shorten it!
-      </button>
+    <form className="form-container">
+      <Flex flexWrap="wrap" flexDirection={["column", "row"]} padding={[3]}>
+        <Box width={[1, 1 / 2]} padding={[1]}>
+          <Flex flexDirection="column">
+            <input
+              type="text"
+              className={error === true ? "error error--message" : ""}
+              placeholder="Shorten a link here..."
+              onChange={handleChange}
+              value={originalLink}
+            />
+            {error ? (
+              <span className="error">please add a link</span>
+            ) : (
+              <span />
+            )}
+          </Flex>
+        </Box>
+        <Box width={[1, 1 / 2]} textAlign="center" padding={[1]}>
+          <button
+            className="button_shorten_it"
+            type="submit"
+            onClick={handleSubmit}
+          >
+            Shorten It!
+          </button>
+        </Box>
+      </Flex>
     </form>
   );
 };
