@@ -5,6 +5,8 @@
 //The designs were created to the following widths:
 
 $mobile: 375px;
+$tablet: 768px;
+$laptop: 1024px;
 $desktop: 1440px;
 
 //Colors
@@ -44,3 +46,10 @@ For the social icons, you can either use the SVGs provided or a font icon librar
 - [IcoMoon](https://icomoon.io)
 - [Ionicons](https://ionicons.com)
 */
+
+//responsive variables 
+
+//form variables
+$form-elements-height: 48px;
+$form-elements-height-desktop: 60px;
+

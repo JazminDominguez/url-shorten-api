@@ -8,9 +8,11 @@ form {
     border-radius: 10px;
     
     input , button {
-        border-radius: 5px;
-        height: 48px;
+        border-radius: 10px;
+        height: $form-elements-height;
         margin: .4em 0 .4em 0;
+        padding-top: 0;
+        padding-bottom: 0;
     };
 
 };
@@ -41,7 +43,6 @@ form {
 button {
     background-color: $cyan;
     color: white;
-    border-radius: 5px;
 };
 
 .button_shorten_it {
@@ -50,3 +51,50 @@ button {
     margin: 0;
 };
 
+//MEDIA QUERIES
+@media(min-width: $tablet){
+    form {
+        background-image: url("../../assets/bg-shorten-desktop.svg");
+        background-size: cover;
+    };
+
+    // The class is adding the 20px of the error msg span
+    .button-container {
+        height: $form-elements-height + 20px;
+    };
+};
+
+@media(min-width: $laptop){
+    form {
+        background-image: url("../../assets/bg-shorten-desktop.svg");
+        background-size: cover;
+    };
+};
+
+
+@media (min-width: $desktop) {
+    form {
+        //this padding overwrites rebass' padding
+        > div{
+            padding: 50px !important;
+        };
+
+        input {
+            margin-right: 5px;
+        };
+
+        input, button {
+            height: $form-elements-height-desktop;
+            margin: 0;
+        };
+    };
+
+    .button_shorten_it {
+        font-size: 20px;
+        width: 90%;
+    };
+
+    .button-container {
+        height: $form-elements-height-desktop + 20px;
+    };
+};

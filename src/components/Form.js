@@ -24,8 +24,13 @@ const Form = () => {
 
   return (
     <form className="form-container">
-      <Flex flexWrap="wrap" flexDirection={["column", "row"]} padding={[3]}>
-        <Box width={[1, 1 / 2]} padding={[1]}>
+      <Flex
+        flexWrap="wrap"
+        flexDirection={["column", "row"]}
+        alignItems={"center"}
+        padding={[3, 4]}
+      >
+        <Box width={[1, 3 / 4, 4 / 5]} padding={[1]}>
           <Flex flexDirection="column">
             <input
               type="text"
@@ -41,7 +46,12 @@ const Form = () => {
             )}
           </Flex>
         </Box>
-        <Box width={[1, 1 / 2]} textAlign="center" padding={[1]}>
+        <Box
+          width={[1, 1 / 4, 1 / 5]}
+          textAlign="center"
+          className={error ? "button-container" : ""}
+          padding={[1]}
+        >
           <button
             className="button_shorten_it"
             type="submit"
