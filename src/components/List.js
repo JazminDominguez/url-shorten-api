@@ -18,16 +18,29 @@ const List = () => {
       return (
         <Flex
           className="collection-links"
-          flexDirection={["column", "row"]}
+          flexDirection={["column", "column", "row"]}
           marginY={[3]}
           key={link.hashid}
         >
-          <Box className="original-link">{link.url}</Box>
-          <Box className="cropped-link">https://rel.ink/{link.hashid}</Box>
-          <Box id={link.hashid}>
+          <Box
+            className="original-link-container"
+            width={[1, 1, 6 / 12, 7 / 12]}
+          >
+            <p className="original-link">{link.url}</p>
+          </Box>
+          <Box
+            className="cropped-link-container"
+            width={[1, 1, 4 / 12, 4 / 12]}
+          >
+            <p className="cropped-link"> https://rel.ink/{link.hashid}</p>
+          </Box>
+          <Box
+            className="copy-button-container"
+            id={link.hashid}
+            width={[1, 1, 2 / 12, 1 / 12]}
+          >
             <button
               id={link.hashid}
-              value={`https://rel.ink/${link.hashid}`}
               ref={shortLinkRef}
               className={
                 "copy-button " + (buttonId === link.hashid ? "copied" : "")

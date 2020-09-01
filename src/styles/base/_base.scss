@@ -27,4 +27,11 @@ h1, h2, h3, button {
 
 p,span {
     font-weight: $medium;
+    font-size: $standard-size;
 };
+
+/*
+p {
+  display: inline-block;
+}
+*/

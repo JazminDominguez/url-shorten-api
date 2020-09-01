@@ -3,9 +3,11 @@
 .collection-links {
     background-color: white;
     border-radius: 5px;
-    padding: 15px;
 };
 
+.original-link-container {
+    border-bottom: $gray solid 1px;
+};
 
 .original-link {
     white-space: nowrap;
@@ -19,9 +21,74 @@
     color: $cyan;
 };
 
-.copy{
+.original-link, .cropped-link {
+    margin-left: 15px;
+};
+
+.copy-button-container {
+ margin-bottom: 15px !important;
+ text-align: center;
+};
+
+.copy-button {
+    width: 90%;
+    border-radius: 5px;
+    height: 35px;
+    font-size: 15px;
 };
 
 .copied{
     background-color: $very-dark-violet;
+};
+
+
+@media(min-width: 832px) and (max-width: $laptop){
+    .cropped-link {
+        margin-left: 0;
+        text-align: center;
+    };
+
+    .copy-button-container {
+        margin-bottom: 0px !important;
+        align-self: center;
+        text-align: revert;
+    };
+};
+
+@media(min-width: $laptop){
+    .collection-links {
+        padding: 10px;
+        align-items: center;
+    };
+
+    .original-link-container {
+        border-bottom: none;
+    };
+
+    .original-link, .cropped-link {
+        margin: 2px;
+    };
+
+    .cropped-link-container {
+        text-align: end;
+        padding: 10px;
+    };
+
+    .copy-button-container {
+        margin-bottom: 0px !important;
+    };
+
+    .copy-button {
+        width: 100%;
+    };
+};
+
+@media(min-width: $desktop){
+    .original-link, .cropped-link {
+        margin: 5px;
+    };
+
+    .original-link {
+        max-width: 100%;
+    };
 };
