@@ -1,0 +1,211 @@
+@import "base/variables";
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+};
+
+nav {
+ background: white;
+ padding: 5px 20px;
+ border-radius: 10px;
+};
+
+ul {
+    list-style: none;
+};
+
+// add negative margin to get rid of blank spaces betwhen elements
+ul li {
+   margin-top: -2px;
+};
+
+a {
+    color: white;
+    text-decoration: none;
+};
+
+.menu li {
+    font-size: 18px;
+    padding: 15px 5px;
+};
+
+.menu li a {
+    display: block;
+};
+
+// Mobile menu
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin:0;
+};
+
+.toggle {
+    cursor: pointer;
+    margin-left: auto;
+};
+
+.item {
+    background-color: $dark_violet;
+    width: 100%;
+    text-align: center;
+    display: none;
+    order: 2;
+    padding: 15px !important;
+    position: relative;
+
+    &--active {
+        display: block;
+    };
+};
+
+.item.sign-up-button {
+    order: 3;
+};
+
+.division:after {
+    content: "";
+    display: block;
+    margin: 0 auto;
+    border-bottom: 3px solid;
+    border-color: hsla(0, 0%, 75%, 0.3);
+    position: absolute;
+    padding-top: 12px;
+    width: 90%;
+};
+
+//adds border to first and last item 
+.first-item {
+    border-radius: 10px 10px 0 0;
+    padding-top: 25px !important;
+};
+
+.last-item {
+    border-radius: 0 0 10px 10px;
+    padding-bottom: 25px !important;
+};
+
+
+.bars {
+    background: $gray;
+    display: inline-block;
+    height: 2px;
+    position: relative;
+    width: 18px;
+
+    &::before, &::after {
+        background: $gray;
+        content: "";
+        display: inline-block;
+        height: 2px;
+        position: absolute;
+        width: 18px;    
+    };
+
+    &::before {
+        top: 5px;
+    };
+
+    &::after {
+        top: -5px;
+    };
+};
+
+//Tablet Menu
+
+@media all and ( min-width: $tablet){
+    .menu {
+        justify-content: center;
+    };
+
+    .logo-container {
+        flex: 1;
+        padding-bottom: 0 !important;
+    };
+
+    .division {
+        border: none;
+        border-radius: 0 0 10px 10px;
+    };
+
+    .last-item {
+        border-radius: 0;
+        padding-bottom: 15px !important;
+    };
+
+    .item.sign-up-button, .login {
+        width: auto;
+        order: 1;
+        display: block;
+        background-color: transparent;
+    };
+
+    .login {
+        > a {
+            color: $very_dark_violet;  
+          };
+    };
+
+    .toggle {
+        order: 1;
+    };
+
+    .button.secondary {
+        border: 0;
+    };
+
+    .sign-up-button a {
+        text-decoration: none;
+        padding: 7px 15px;
+        background: $cyan;
+        border-radius: 20px;
+    };
+};
+
+@media all and (min-width: $laptop){
+    .item {
+        background-color: white;
+        display: block;
+        width: auto;
+        padding: 15px !important;
+        > a {
+            color: $very_dark_violet;  
+          };
+    };
+
+    .sign-up-button a {
+        color: white;
+    };
+    
+    .division:after {
+        display: none;
+    };
+
+    .toggle {
+        display: none;
+    };
+
+    .logo {
+        order: 0;
+    };
+
+    .item {
+        order: 1;
+    };
+
+    .button {
+        order: 2;
+    };
+
+    .menu li {
+        padding: 15px 10px;
+    };
+
+    .menu li.button {
+        padding-right: 0;
+    };
+};
