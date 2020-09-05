@@ -27,7 +27,7 @@ a {
 };
 
 .menu li {
-    font-size: 18px;
+    font-size: 16px;
     padding: 15px 5px;
 };
 
@@ -118,9 +118,6 @@ a {
 //Tablet Menu
 
 @media all and ( min-width: $tablet){
-    .menu {
-        justify-content: center;
-    };
 
     .logo-container {
         flex: 1;
@@ -171,10 +168,22 @@ a {
         background-color: white;
         display: block;
         width: auto;
-        padding: 15px !important;
+        padding: 10px !important;
+
         > a {
             color: $very_dark_violet;  
           };
+    };
+    
+    .left-options {
+        flex: 0 1;
+        text-align: left;
+        flex-basis: px;
+    };
+
+    .right-options {
+        flex: 1 1;
+        text-align: right;
     };
 
     .sign-up-button a {

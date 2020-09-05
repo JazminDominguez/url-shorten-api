@@ -13,7 +13,7 @@ const Header = () => {
   return (
     <nav>
       <ul className="menu">
-        <li className="logo-container">
+        <li className="logo-container left-options">
           <img src={logo} alt="shortly logo" />
         </li>
         <li className={`item item--${active} first-item left-options`}>
@@ -22,15 +22,13 @@ const Header = () => {
         <li className={`item item--${active} left-options`}>
           <a href="#">Pricing</a>
         </li>
-        <li className={`item item--${active} division left-options`}>
+        <li className={`item item--${active} division`}>
           <a href="#">Resources</a>
         </li>
         <li className={`item item--${active} login right-options`}>
           <a href="#">Login</a>
         </li>
-        <li
-          className={`item item--${active} sign-up-button last-item left-options`}
-        >
+        <li className={`item item--${active} sign-up-button `}>
           <a href="#">Sign Up</a>
         </li>
         <li className="toggle" onClick={menuSwitch}>
