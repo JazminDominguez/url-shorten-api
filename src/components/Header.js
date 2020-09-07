@@ -28,7 +28,7 @@ const Header = () => {
         <li className={`item item--${active} login right-options`}>
           <a href="#">Login</a>
         </li>
-        <li className={`item item--${active} sign-up-button `}>
+        <li className={`item item--${active} last-item sign-up-button `}>
           <a href="#">Sign Up</a>
         </li>
         <li className="toggle" onClick={menuSwitch}>
