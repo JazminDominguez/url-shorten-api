@@ -55,3 +55,20 @@ For the social icons, you can either use the SVGs provided or a font icon librar
 $form-elements-height: 48px;
 $form-elements-height-desktop: 60px;
 
+//margin
+
+$body-margin-mobile: 0 1.5em 0 1.5em;
+$body-margin-tablet: 0 4rem 0 4rem;
+$body-margin-desk: 0 7.5rem 0 7.5rem;
+$body-margin-desk-left: 7rem;
+
+
+/*
+@media (min-width: $tablet) {
+    margin: 0 4rem 0 4rem;
+};
+
+@media (min-width: $laptop) {
+    margin: 0 6rem 0 6rem;
+};
+*/
