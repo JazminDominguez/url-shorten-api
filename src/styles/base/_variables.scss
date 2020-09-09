@@ -21,7 +21,7 @@ $dark_violet: hsl(257, 27%, 26%);
 $red: hsla(0, 87%, 67%, 0.8);
 
 //Neutral
-$gray: hsl(0, 0%, 75%);
+$gray: 	hsl(231, 30%, 95%);
 $grayish_violet: hsl(257, 7%, 63%);
 $very_dark_blue: hsl(255, 11%, 22%);
 $very_dark_violet: hsl(260, 8%, 14%);
@@ -60,6 +60,12 @@ $form-elements-height-desktop: 60px;
 $body-margin-mobile: 0 1.5em 0 1.5em;
 $body-margin-tablet: 0 4rem 0 4rem;
 $body-margin-desk: 0 7.5rem 0 7.5rem;
+
+//left and right margin
+$margin-mobile-X: 1.5em;
+$margin-tablet-X: 4em;
+$margin-desk-X: 7.5em;
+
 $body-margin-desk-left: 7rem;
 
 

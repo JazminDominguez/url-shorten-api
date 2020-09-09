@@ -1,0 +1,138 @@
+@import "../base/variables";
+
+.info-container {
+    padding: 3em $margin-mobile-X;
+    background-color: $gray;
+    text-align: center;
+
+    h2, h3 {
+        color: $very_dark_violet;
+    };
+
+    h2 {
+        font-size: 25px;
+        padding: 0.5em;
+    };
+
+    p {
+        color: $grayish_violet;
+    };
+};
+
+.card-container {
+    margin: 3em 0;
+    display: flex;
+    flex-direction: column;
+};
+
+.card {
+    background-color: white;
+    margin: 5em 0;
+    border-radius: 10px;
+    position: relative;
+
+    p {
+        font-size: 16px;
+        padding: 1.8em;
+    };
+
+    h3 {
+        font-size: 20px;
+        padding-top: 3em;
+    };
+};
+
+
+.brand-recognition, .detailed-records {
+    &::after{
+        content: "";
+        background-color: $cyan;
+        width: 0.5em;
+        height: 3em;
+        left: 50%;
+        bottom: -4.5em;
+        transform: translate(-50%,-50%);    
+        position: absolute;
+    };
+};
+
+.info-icon {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    top: 0;
+    padding: 1.2em;
+    border-radius: 100%;
+    background-color: $very_dark_violet;
+    z-index: 5;
+
+    img {
+        vertical-align: text-top;
+        max-width: 40px;
+        max-height: 40px;    
+    };
+
+};
+
+@media all and (min-width: $laptop) {
+    .info-container {
+        padding: 4em $margin-desk-X;
+
+        h2 {
+            font-size: 40px;
+        };
+
+        span {
+            &::before {
+                content: "\A";
+                white-space: pre;
+            };
+        };    
+    };
+
+    .cards-container {
+        text-align: left;
+        display: inline-flex;
+        flex-direction: row;
+        margin-top: 6em;
+        height: 30em;
+    };
+
+    .card {
+        min-width: 16em;
+        min-height: 20em;
+        max-width: 23em;
+        max-height: 18em;
+        margin: 1em;
+
+        h3 {
+            padding-left: 1.8em;
+        };
+    };
+
+    .brand-recognition, .detailed-records {
+        &::after{
+            content: "";
+            width: 3em;
+            height: 0.5em;
+            left: unset;
+            bottom: 50%;
+            right: -4.5em;
+            position: absolute;
+        };
+    };    
+
+    .detailed-records {
+        margin-top: 3em;
+    };
+
+    .fully-customizable {
+        margin-top: 5em;
+    };
+
+    .info-icon {
+        left: 4em;
+        top: 0;
+        padding: 1.2em;    
+    };
+};
