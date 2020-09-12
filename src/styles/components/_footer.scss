@@ -1,0 +1,83 @@
+@import "base/variables";
+
+footer {
+    background-color: $very_dark_violet;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    flex-wrap: wrap;
+    padding: 2.5em $margin-mobile-X;
+
+    a {
+        color: $grayish_violet;
+    };
+
+    h3 {
+        padding: 0.6em;
+    };
+};
+
+.footer-logo {
+    background-image: url("../../assets/logo-white.svg");
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 33px;
+    background-position: center;
+    margin-top: 1em;
+    position: relative;
+};
+
+.link-container {
+    display: inline-grid;
+    margin: 1em;
+    
+    a {
+        padding: 0.6em;
+    };
+};
+
+.social-media-container {
+    margin: 1em auto;
+
+    a {
+     margin: 0.6em;
+    };
+};
+
+@media all and (min-width: $laptop){
+    footer {
+        flex-direction: row;
+        flex-wrap: initial;
+        align-items: baseline;
+        text-align: left;
+        justify-content: space-evenly;
+        padding: 1.5em $margin-desk-X;
+
+
+        h3 {
+            padding: 0.6em 0.3em;
+        };
+    };
+
+    .footer-logo {
+        top: 0.5em;
+        flex: 1 0 30%;
+        background-position: initial;
+    };
+
+    .link-container {
+        margin: 0.8em;
+        flex: 0 0 15%;
+
+        a {
+            padding: 0.6em 0.3em;
+        };
+    };
+
+    .social-media-container {
+        position: relative;
+        top: 0.5em;
+        text-align: center;
+    };
+};

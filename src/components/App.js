@@ -5,6 +5,7 @@ import Form from "./Form";
 import Header from "./Header";
 import Hero from "./Hero";
 import Info from "./Info";
+import Footer from "./Footer";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Form />
       <List />
       <Info />
+      <Footer />
     </div>
   );
 }
