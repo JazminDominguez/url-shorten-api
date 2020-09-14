@@ -1,0 +1,58 @@
+@import "base/variables";
+
+.call-to-action {
+    background-color: $dark-violet;
+    background-image: url("../../assets/bg-boost-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: right;
+    text-align: center;
+    min-height: 18em;
+    position: relative;
+
+    div {
+        position: absolute;
+        min-width: 320px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    };
+
+    h2 {
+        color: white;
+        padding-bottom: 0.6em;
+        font-size: 25px;
+    };
+
+    button {
+        padding: 10px 30px;
+        border-radius: 20px;
+    };
+};
+
+@media all and (min-width: $tablet) {
+    .call-to-action {
+        background-image: url("../../assets/bg-boost-desktop.svg");
+        min-height: 15em;
+        background-position: unset;
+    };
+};
+
+@media all and (min-width: $laptop) {
+    .call-to-action {
+        
+        div {
+            min-width: 25em;
+        };
+
+        h2 {
+            font-size: 35px;
+        };
+
+        button {
+            font-size: 15px;
+            padding: 10px 35px;
+            border-radius: 25px;
+        };
+
+    };
+};

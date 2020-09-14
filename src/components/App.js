@@ -6,6 +6,7 @@ import Header from "./Header";
 import Hero from "./Hero";
 import Info from "./Info";
 import Footer from "./Footer";
+import CallToAction from "./CallToAction";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Form />
       <List />
       <Info />
+      <CallToAction />
       <Footer />
     </div>
   );
