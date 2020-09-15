@@ -1,6 +1,23 @@
 @import "base/variables";
 
+#form {
+    max-width: 100%;
+    min-height: 66px;
+    position: relative;
+
+    &::after {
+        content: "";
+        width: 100%;
+        height: 74px;
+        background-color: $gray;
+        bottom: 0;
+        position: absolute;
+        z-index: -1;
+    };
+};
+
 form {
+    margin: 0 $margin-mobile-X;
     background-color: $dark_violet;
     background-image: url("../../assets/bg-shorten-mobile.svg");
     background-repeat: no-repeat;
@@ -66,6 +83,7 @@ button {
 
 @media(min-width: $laptop){
     form {
+        margin: 0 $margin-desk-X;
         background-image: url("../../assets/bg-shorten-desktop.svg");
         background-size: cover;
     };
@@ -74,6 +92,7 @@ button {
 
 @media (min-width: $desktop) {
     form {
+        top: 84px;
         //this padding overwrites rebass' padding
         > div{
             padding: 50px !important;

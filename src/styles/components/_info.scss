@@ -1,7 +1,7 @@
 @import "../base/variables";
 
 .info-container {
-    padding: 3em $margin-mobile-X;
+    padding: 4em $margin-mobile-X 3em $margin-mobile-X;
     background-color: $gray;
     text-align: center;
 
@@ -76,7 +76,7 @@
 
 @media all and (min-width: $laptop) {
     .info-container {
-        padding: 4em $margin-desk-X;
+        padding: 10em $margin-desk-X 4em $margin-desk-X;
 
         h2 {
             font-size: 40px;
