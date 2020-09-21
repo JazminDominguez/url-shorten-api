@@ -8,12 +8,12 @@
 
 nav {
  background: white;
- padding: 5px 20px;
- border-radius: 10px;
+ padding: 20px 24px 5px 24px;
 };
 
 ul {
     list-style: none;
+    position: relative;
 };
 
 // add negative margin to get rid of blank spaces betwhen elements
@@ -21,9 +21,10 @@ ul li {
    margin-top: -2px;
 };
 
-a {
+a, p {
     color: white;
     text-decoration: none;
+    font-size: 16px !important;
 };
 
 .menu li {
@@ -96,27 +97,27 @@ a {
 
 
 .bars {
-    background: $gray;
+    background: $grayish_violet;
     display: inline-block;
-    height: 2px;
+    height: 3px;
     position: relative;
-    width: 18px;
+    width: 25px;
 
     &::before, &::after {
-        background: $gray;
+        background: $grayish_violet;
         content: "";
         display: inline-block;
-        height: 2px;
+        height: 3px;
         position: absolute;
-        width: 18px;    
+        width: 25px;  
     };
 
     &::before {
-        top: 5px;
+        top: 9px;
     };
 
     &::after {
-        top: -5px;
+        top: -9px;
     };
 };
 
@@ -159,15 +160,20 @@ a {
         border: 0;
     };
 
-    .sign-up-button a {
-        text-decoration: none;
-        padding: 7px 15px;
+    .sign-up-button p {
+        font-weight: $bold;
+        font-size: 16px;
+        padding: 7px 20px;
         background: $cyan;
         border-radius: 20px;
     };
 };
 
 @media all and (min-width: $laptop){
+    nav {
+        padding: 2em $margin-desk-X 1em $margin-desk-X;
+    };
+
     .item {
         background-color: white;
         display: block;
@@ -175,7 +181,13 @@ a {
         padding: 10px !important;
 
         > a {
-            color: $very_dark_violet;  
+            color: $grayish_violet;
+            font-weight: bold;
+            margin:  0 0 0 1em;
+
+            &:hover {
+                color: $very_dark_violet;
+            };
           };
     };
     
@@ -194,8 +206,12 @@ a {
         text-align: right;
     };
 
-    .sign-up-button a {
-        color: white;
+    .sign-up-button {
+        color: white !important;
+
+        &:hover {
+            opacity: 0.6;
+        };
     };
     
     .division:after {

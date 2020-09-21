@@ -23,6 +23,10 @@ p,span {
     font-size: $standard-size;
 };
 
+button:hover {
+    background-color: lighten($color: $cyan, $amount: 25);
+};
+
 /*
 p {
   display: inline-block;

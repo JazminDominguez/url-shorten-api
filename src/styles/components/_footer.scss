@@ -11,6 +11,10 @@ footer {
 
     a {
         color: $grayish_violet;
+
+        &:hover {
+            color: $cyan;
+        };
     };
 
     h3 {
@@ -79,5 +83,10 @@ footer {
         position: relative;
         top: 0.5em;
         text-align: center;
+    };
+
+    .social-media-icon:hover {
+        cursor: pointer;
+	    filter: sepia(30%) saturate(3979%) hue-rotate(139deg) brightness(82%) contrast(99%);
     };
 };

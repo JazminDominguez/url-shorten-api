@@ -32,19 +32,31 @@ const Footer = () => {
       <div className="social-media-container">
         <a href="/#">
           {" "}
-          <img src={facebookIcon} alt="facebook" />
+          <img
+            className="social-media-icon"
+            src={facebookIcon}
+            alt="facebook"
+          />
         </a>
         <a href="/#">
           {" "}
-          <img src={twitterIcon} alt="twitter" />
+          <img className="social-media-icon" src={twitterIcon} alt="twitter" />
         </a>
         <a href="/#">
           {" "}
-          <img src={pinterestIcon} alt="pinterest" />
+          <img
+            className="social-media-icon"
+            src={pinterestIcon}
+            alt="pinterest"
+          />
         </a>
         <a href="/#">
           {" "}
-          <img src={instagramIcon} alt="instagram" />
+          <img
+            className="social-media-icon"
+            src={instagramIcon}
+            alt="instagram"
+          />
         </a>
       </div>
     </footer>

@@ -7,6 +7,7 @@
     align-items: center;
     text-align: center;
     padding: 1em 0 2em 0;
+    background-color: white;
 };
 
 .working-illustration {
@@ -55,9 +56,10 @@
 
 @media all and (min-width: $laptop) {
     .hero {
+        margin-top: -2px;
         flex-direction: row;
         flex-wrap: nowrap;
-        margin: 1.8em auto;
+        padding: 1.8em 0 4em 0;
     };
 
     .working-illustration {
@@ -89,10 +91,17 @@
             margin: 15px 0;
         };
     };
-
+    
+    .logo-container {
+        padding-left: 0 !important;
+    };
 };
 
 @media all and (min-width: $desktop) {
+    .hero {
+        padding: 2em 0 5em 0;
+    };
+
     .hero-text {
         text-align: left;
 
