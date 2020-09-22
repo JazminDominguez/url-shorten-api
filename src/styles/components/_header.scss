@@ -8,7 +8,8 @@
 
 nav {
  background: white;
- padding: 20px 24px 5px 24px;
+ position: relative;
+ z-index: 10;
 };
 
 ul {
@@ -47,6 +48,11 @@ a, p {
     flex-wrap: wrap;
     align-items: center;
     margin:0;
+    padding: 20px 24px 5px 24px;
+    position: absolute;  /* <-- added declarations */
+    left: 0; 
+    top: 100%;  
+    width: 100%;         /*     and here...        */
 };
 
 .toggle {
@@ -60,7 +66,7 @@ a, p {
     text-align: center;
     display: none;
     order: 2;
-    padding: 15px !important;
+    padding: 22px !important;
     position: relative;
 
     &--active {
@@ -167,11 +173,21 @@ a, p {
         background: $cyan;
         border-radius: 20px;
     };
+
+    .division:after {
+        display: none;
+    };
 };
 
 @media all and (min-width: $laptop){
     nav {
         padding: 2em $margin-desk-X 1em $margin-desk-X;
+        position: unset;
+    };
+
+    .menu {
+        position: unset;
+        padding: unset;
     };
 
     .item {
@@ -214,10 +230,6 @@ a, p {
         };
     };
     
-    .division:after {
-        display: none;
-    };
-
     .toggle {
         display: none;
     };

@@ -73,6 +73,7 @@ button {
     form {
         background-image: url("../../assets/bg-shorten-desktop.svg");
         background-size: cover;
+        margin: 0 $margin-tablet-X;
     };
 
     // The class is adding the 20px of the error msg span

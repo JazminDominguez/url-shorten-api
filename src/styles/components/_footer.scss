@@ -49,7 +49,7 @@ footer {
     };
 };
 
-@media all and (min-width: $laptop){
+@media all and (min-width: $tablet){
     footer {
         flex-direction: row;
         flex-wrap: initial;
