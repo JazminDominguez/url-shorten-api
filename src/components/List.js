@@ -8,7 +8,6 @@ const List = () => {
   const [buttonId, setButtonId] = useState("");
   const shortLinkRef = useRef(null);
 
-  console.log(links);
   const handleClick = (e) => {
     setButtonId(e.target.id);
     navigator.clipboard.writeText(`https://rel.ink/${e.target.id}`);

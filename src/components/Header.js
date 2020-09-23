@@ -17,16 +17,16 @@ const Header = () => {
           <img src={logo} alt="shortly logo" />
         </li>
         <li className={`item item--${active} first-item left-options`}>
-          <a href="#">Features</a>
+          <a href="/#">Features</a>
         </li>
         <li className={`item item--${active} left-options`}>
-          <a href="#">Pricing</a>
+          <a href="/#">Pricing</a>
         </li>
         <li className={`item item--${active} division`}>
-          <a href="#">Resources</a>
+          <a href="/#">Resources</a>
         </li>
         <li className={`item item--${active} login right-options`}>
-          <a href="#">Login</a>
+          <a href="/#">Login</a>
         </li>
         <li className={`item item--${active} last-item sign-up-button `}>
           <p>Sign Up</p>
