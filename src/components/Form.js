@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { getLink } from "../actions/index";
+import { getLink, showLoader } from "../actions/index";
 import { Flex, Box } from "rebass";
 
 const Form = () => {
@@ -18,6 +18,7 @@ const Form = () => {
       setError(true);
     } else {
       setOriginalLink("");
+      dispatch(showLoader());
       dispatch(getLink(originalLink));
     }
   };

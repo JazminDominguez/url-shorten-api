@@ -4,7 +4,8 @@ import PropTypes from "prop-types";
 import { Flex, Box } from "rebass";
 
 const List = () => {
-  const links = useSelector((state) => state);
+  const links = useSelector((state) => state.arrayOfLinks);
+  const loading = useSelector((state) => state.loading);
   const [buttonId, setButtonId] = useState("");
   const shortLinkRef = useRef(null);
 
@@ -15,13 +16,13 @@ const List = () => {
 
   const linksList =
     Object.keys(links).length > 0 ? (
-      links.map((link) => {
+      links.map((link, index) => {
         return (
           <Flex
             className="collection-links"
             flexDirection={["column", "column", "row"]}
             marginY={[3]}
-            key={link.hashid}
+            key={link.hashid + index}
           >
             <Box
               className="original-link-container"
@@ -44,7 +45,8 @@ const List = () => {
                 id={link.hashid}
                 ref={shortLinkRef}
                 className={
-                  "copy-button " + (buttonId === link.hashid ? "copied" : "")
+                  "copy-button " +
+                  (buttonId === link.hashid + index ? "copied" : "")
                 }
                 onClick={handleClick}
               >
@@ -57,7 +59,24 @@ const List = () => {
     ) : (
       <div />
     );
-  return <section id="list">{linksList}</section>;
+
+  return (
+    <section id="list">
+      {linksList}
+      {loading ? (
+        <div className="sk-chase">
+          <div className="sk-chase-dot"></div>
+          <div className="sk-chase-dot"></div>
+          <div className="sk-chase-dot"></div>
+          <div className="sk-chase-dot"></div>
+          <div className="sk-chase-dot"></div>
+          <div className="sk-chase-dot"></div>
+        </div>
+      ) : (
+        <div />
+      )}
+    </section>
+  );
 };
 
 List.propTypes = {
